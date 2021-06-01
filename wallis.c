@@ -24,3 +24,12 @@ int main(void) {
   }
 }
 
+float wallis_pi(int i){
+	float sum=1;
+	for(int n=1;n<=i;n++){
+		sum=sum *4*n*n/(4*n*n-1);
+	}
+	sum=sum*2;
+	return sum;
+}
+
