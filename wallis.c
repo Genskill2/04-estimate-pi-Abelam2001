@@ -26,10 +26,11 @@ int main(void) {
 
 float wallis_pi(int i){
 	float sum=1;
+	float term;
 	for(int n=1;n<=i;n++){
-		sum=sum *(4*n*n/(4*n*n-1));
+		term=(float)4*n*n/(4*n*n-1);
+		sum=sum *term;
 	}
 	sum=sum*2;
 	return sum;
-}
-
+};
