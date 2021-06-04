@@ -39,21 +39,21 @@ int main(void) {
   }
 }
 
-float mc_pi(int count)
+float mc_pi(int i)
 {
-	float picount=0;
-	for(int i=0;i<count;i++)
+	float c=0;
+	for(int n=0;n<i;n++)
 	{
 		
 		float x = frandom();
 		float y = frandom();
 		if(sqrt(x*x+y*y)<1)
 		{
-			picount++;
+			c++;
 		}
 	}
-	float area = ((4*picount)/count);
-	return area;
+	float ret = ((4*c)/i);
+	return ret;
 }
 
 
