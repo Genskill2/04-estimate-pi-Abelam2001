@@ -39,5 +39,23 @@ int main(void) {
   }
 }
 
+float mc_pi(int i){
+  float a,b;
+  int s,c;
+  float distance;
+  for(int n=0;n<=i;++n){
+    a=frandom();
+    b=frandom();
+    distance=(float)sqrt(pow(a,2)-pow(b,2));
+    if(distance>1)
+    	s++;
+    else
+    	c++;
+   }
+  float ret;
+   ret=4*c/s;
+   return ret;
+}
+
 
 
