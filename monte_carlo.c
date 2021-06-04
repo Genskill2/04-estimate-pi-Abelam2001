@@ -39,22 +39,23 @@ int main(void) {
   }
 }
 
-float mc_pi(int i)
-{
-	float c=0;
-	for(int n=0;n<i;n++)
-	{
-		
-		float x = frandom();
-		float y = frandom();
-		if(sqrt(x*x+y*y)<1)
-		{
-			c++;
-		}
-	}
-	float ret = ((4*c)/i);
-	return ret;
-}
+float mc_pi(int i){
+  float a,b;
+  float c=0;
+  float distance;
+  for(int n=0;n<i;n++)
+  {
+    a=frandom();
+    b=frandom();
+    distance=(float)sqrt(pow(a,2)+pow(b,2));
+    if(distance<1)
+    {
+        c++;
+    }
+  } 
 
+  float ret=((4*c)/i);
+   return ret;
+}
 
 
